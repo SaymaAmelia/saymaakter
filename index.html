@@ -3,32 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sayma Akter | Front-End Developer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="../image/icon.jpg" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>BrightWave Studio — Fluid Digital Experiences</title>
+
+  <meta name="description" content="BrightWave Studio — Premium digital experiences with smooth interactions and creative precision." />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <!-- ===== Navbar ===== -->
-  <nav class="navbar">
-    <div class="logo">Sayma<span>Akter</span></div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-logo">🌊</span>
+        <span class="brand-name">BrightWave</span>
+      </div>
 
-  <!-- ===== Banner / Hero Section ===== -->
-  <section class="banner" id="home">
-    <div class="overlay"></div>
-    <div class="banner-content">
-      <h1>Hello, I'm <span>Sayma Akter</span></h1>
-      <h2>Front-End Developer</h2>
-      <p>I create modern, responsive, and engaging web experiences using React, Tailwind CSS, and JavaScript.</p>
-      <a href="#projects" class="btn">View My Work</a>
+      <nav class="nav">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact" class="btn-nav">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <canvas id="waveCanvas"></canvas>
+    <div class="container hero-inner fade-in">
+      <div class="hero-content">
+        <h1>Crafting Fluid Digital Experiences</h1>
+        <p>Design clarity meets motion precision. Every detail moves in harmony with your brand.</p>
+        <div class="cta-buttons">
+          <a href="#contact" class="btn primary">Start a Project</a>
+          <a href="#work" class="btn ghost">Our Work</a>
+        </div>
+      </div>
     </div>
   </section>
+
+  <section id="services" class="section fade-in">
+    <div class="container">
+      <h2>Our Services</h2>
+      <p class="section-lead">Elevate your digital presence with seamless experiences and refined aesthetics.</p>
+      <div class="grid">
+        <div class="card"><h3>UX/UI Design</h3><p>Pixel-perfect design systems with human-centered usability.</p></div>
+        <div class="card"><h3>Web Development</h3><p>Clean, efficient, high-performance code across all devices.</p></div>
+        <div class="card"><h3>Optimization</h3><p>Lightning-fast performance and SEO for modern businesses.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="section alt fade-in">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <p class="section-lead">Showcasing innovation, design, and flawless execution.</p>
+      <div class="grid">
+        <div class="work-item"><div class="thumb gradient-blue"></div><h4>Next-Gen Platform</h4></div>
+        <div class="work-item"><div class="thumb gradient-purple"></div><h4>Interactive Dashboard</h4></div>
+        <div class="work-item"><div class="thumb gradient-green"></div><h4>Creative Launch Site</h4></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact fade-in">
+    <div class="container">
+      <h2>Let's Create Together</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Email Address" required />
+        <textarea id="message" rows="4" placeholder="Tell us about your project..." required></textarea>
+        <button type="submit" class="btn primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> BrightWave Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>
